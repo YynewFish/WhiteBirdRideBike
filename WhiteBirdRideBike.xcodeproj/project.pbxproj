@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		8A579CD61BFF47750012C3E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A579CD51BFF47750012C3E3 /* main.m */; };
 		8A579CD91BFF47750012C3E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A579CD81BFF47750012C3E3 /* AppDelegate.m */; };
-		8A579CDC1BFF47750012C3E3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A579CDB1BFF47750012C3E3 /* FirstViewController.m */; };
-		8A579CDF1BFF47750012C3E3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A579CDE1BFF47750012C3E3 /* SecondViewController.m */; };
 		8A579CE21BFF47750012C3E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A579CE01BFF47750012C3E3 /* Main.storyboard */; };
 		8A579CE41BFF47750012C3E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A579CE31BFF47750012C3E3 /* Assets.xcassets */; };
-		8A579CE71BFF47750012C3E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A579CE51BFF47750012C3E3 /* LaunchScreen.storyboard */; };
+		8A579CF01BFF49B70012C3E3 /* RideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A579CEF1BFF49B70012C3E3 /* RideViewController.m */; };
+		8A579CF41BFF53050012C3E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A579CF31BFF53050012C3E3 /* MapKit.framework */; };
+		8A579CF61BFF53100012C3E3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A579CF51BFF53100012C3E3 /* CoreLocation.framework */; };
+		8A579CF81BFF53320012C3E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A579CF71BFF53320012C3E3 /* CoreGraphics.framework */; };
+		8A579CFD1C003D050012C3E3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A579CFC1C003D050012C3E3 /* MapViewController.m */; };
+		8A579D001C0040690012C3E3 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A579CFF1C0040690012C3E3 /* HistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +24,18 @@
 		8A579CD51BFF47750012C3E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8A579CD71BFF47750012C3E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A579CD81BFF47750012C3E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8A579CDA1BFF47750012C3E3 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		8A579CDB1BFF47750012C3E3 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		8A579CDD1BFF47750012C3E3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		8A579CDE1BFF47750012C3E3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		8A579CE11BFF47750012C3E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A579CE31BFF47750012C3E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8A579CE61BFF47750012C3E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A579CE81BFF47750012C3E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A579CEE1BFF49B70012C3E3 /* RideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RideViewController.h; sourceTree = "<group>"; };
+		8A579CEF1BFF49B70012C3E3 /* RideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RideViewController.m; sourceTree = "<group>"; };
+		8A579CF31BFF53050012C3E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8A579CF51BFF53100012C3E3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8A579CF71BFF53320012C3E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8A579CFB1C003D050012C3E3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		8A579CFC1C003D050012C3E3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		8A579CFE1C0040690012C3E3 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		8A579CFF1C0040690012C3E3 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A579CF81BFF53320012C3E3 /* CoreGraphics.framework in Frameworks */,
+				8A579CF61BFF53100012C3E3 /* CoreLocation.framework in Frameworks */,
+				8A579CF41BFF53050012C3E3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				8A579CD31BFF47750012C3E3 /* WhiteBirdRideBike */,
+				8A579CF91BFF534A0012C3E3 /* Frameworks */,
 				8A579CD21BFF47750012C3E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,16 +72,7 @@
 		8A579CD31BFF47750012C3E3 /* WhiteBirdRideBike */ = {
 			isa = PBXGroup;
 			children = (
-				8A579CD71BFF47750012C3E3 /* AppDelegate.h */,
-				8A579CD81BFF47750012C3E3 /* AppDelegate.m */,
-				8A579CDA1BFF47750012C3E3 /* FirstViewController.h */,
-				8A579CDB1BFF47750012C3E3 /* FirstViewController.m */,
-				8A579CDD1BFF47750012C3E3 /* SecondViewController.h */,
-				8A579CDE1BFF47750012C3E3 /* SecondViewController.m */,
-				8A579CE01BFF47750012C3E3 /* Main.storyboard */,
-				8A579CE31BFF47750012C3E3 /* Assets.xcassets */,
-				8A579CE51BFF47750012C3E3 /* LaunchScreen.storyboard */,
-				8A579CE81BFF47750012C3E3 /* Info.plist */,
+				8A579CFA1BFF53890012C3E3 /* Classes */,
 				8A579CD41BFF47750012C3E3 /* Supporting Files */,
 			);
 			path = WhiteBirdRideBike;
@@ -79,9 +81,37 @@
 		8A579CD41BFF47750012C3E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8A579CE01BFF47750012C3E3 /* Main.storyboard */,
 				8A579CD51BFF47750012C3E3 /* main.m */,
+				8A579CE81BFF47750012C3E3 /* Info.plist */,
+				8A579CE31BFF47750012C3E3 /* Assets.xcassets */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A579CF91BFF534A0012C3E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A579CF71BFF53320012C3E3 /* CoreGraphics.framework */,
+				8A579CF51BFF53100012C3E3 /* CoreLocation.framework */,
+				8A579CF31BFF53050012C3E3 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A579CFA1BFF53890012C3E3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8A579CD71BFF47750012C3E3 /* AppDelegate.h */,
+				8A579CD81BFF47750012C3E3 /* AppDelegate.m */,
+				8A579CEE1BFF49B70012C3E3 /* RideViewController.h */,
+				8A579CEF1BFF49B70012C3E3 /* RideViewController.m */,
+				8A579CFB1C003D050012C3E3 /* MapViewController.h */,
+				8A579CFC1C003D050012C3E3 /* MapViewController.m */,
+				8A579CFE1C0040690012C3E3 /* HistoryViewController.h */,
+				8A579CFF1C0040690012C3E3 /* HistoryViewController.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +172,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A579CE71BFF47750012C3E3 /* LaunchScreen.storyboard in Resources */,
 				8A579CE41BFF47750012C3E3 /* Assets.xcassets in Resources */,
 				8A579CE21BFF47750012C3E3 /* Main.storyboard in Resources */,
 			);
@@ -155,10 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A579CDF1BFF47750012C3E3 /* SecondViewController.m in Sources */,
 				8A579CD91BFF47750012C3E3 /* AppDelegate.m in Sources */,
-				8A579CDC1BFF47750012C3E3 /* FirstViewController.m in Sources */,
+				8A579CF01BFF49B70012C3E3 /* RideViewController.m in Sources */,
 				8A579CD61BFF47750012C3E3 /* main.m in Sources */,
+				8A579D001C0040690012C3E3 /* HistoryViewController.m in Sources */,
+				8A579CFD1C003D050012C3E3 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,14 +201,6 @@
 				8A579CE11BFF47750012C3E3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8A579CE51BFF47750012C3E3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A579CE61BFF47750012C3E3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -268,7 +290,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = WhiteBirdRideBike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Xu-Menghua.WhiteBirdRideBike";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -279,7 +303,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = WhiteBirdRideBike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Xu-Menghua.WhiteBirdRideBike";
 				PRODUCT_NAME = "$(TARGET_NAME)";
