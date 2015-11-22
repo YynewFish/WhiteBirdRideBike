@@ -19,6 +19,8 @@
 @property (nonatomic, assign) double distance;
 @property (nonatomic, assign) double averageSpeed;
 @property (strong) NSTimer *tipLabelAnimationTimer;
+@property (nonatomic, strong) NSString *startTime;
+@property (nonatomic, strong) NSString *overTime;
 
 @end
 
@@ -73,6 +75,11 @@
         self.time = -1;
         self.distance = 0;
         self.averageSpeed = 0;
+        [self.locationsArray removeAllObjects];
+        NSDate *now = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+        self.startTime = [formatter stringFromDate:now];
         [self timeStart];
         //NSLog(@"%d", sender.tag);
         [sender setTitle:@"停止" forState:UIControlStateNormal];
@@ -81,10 +88,14 @@
     }else if (sender.tag == 2) {
         [self.timer invalidate];
         //NSLog(@"%d", sender.tag);
+        NSDate *now = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+        self.overTime = [formatter stringFromDate:now];
         self.speedLabel.text = @"0.00";
         [sender setTitle:@"开始" forState:UIControlStateNormal];
         [sender setBackgroundColor:[UIColor colorWithRed:0 green:0.5 blue:1 alpha:1]];
-        [sender setTag:1];
+        [sender setTag:3];
     }
 }
 

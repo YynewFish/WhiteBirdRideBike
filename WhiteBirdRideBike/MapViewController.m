@@ -100,7 +100,8 @@
     if (self.flag == 2) {
         CLLocation *currentLocation = [locations lastObject];
         [self.locationsArray addObject:currentLocation];
-        
+    }
+    if (self.flag != 1) {
         if (self.routeLine != nil) {
             self.routeLine = nil;
             self.routeLineView = nil;
