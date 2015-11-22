@@ -9,18 +9,14 @@
 #import "RideViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import "MapViewController.h"
+#import "RideRecord.h"
 
 @interface RideViewController () <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, assign) int time;
 @property (strong) NSTimer *timer;
 @property (nonatomic, strong) CLLocation *oldLocation;
-@property (nonatomic, assign) double distance;
-@property (nonatomic, assign) double averageSpeed;
 @property (strong) NSTimer *tipLabelAnimationTimer;
-@property (nonatomic, strong) NSString *startTime;
-@property (nonatomic, strong) NSString *overTime;
 
 @end
 
@@ -38,9 +34,10 @@
     self.locationManager.pausesLocationUpdatesAutomatically = YES;
     
     self.locationsArray = [[NSMutableArray alloc] init];
-    self.time = -1;
-    self.distance = 0;
-    self.averageSpeed = 0;
+    self.record = [[RideRecord alloc] init];
+    self.record.time = -1;
+    self.record.distance = 0;
+    self.record.averageSpeed = 0;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -72,14 +69,14 @@
 
 - (IBAction)start:(UIButton *)sender {
     if (sender.tag == 1) {
-        self.time = -1;
-        self.distance = 0;
-        self.averageSpeed = 0;
+        self.record.time = -1;
+        self.record.distance = 0;
+        self.record.averageSpeed = 0;
         [self.locationsArray removeAllObjects];
         NSDate *now = [NSDate date];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
-        self.startTime = [formatter stringFromDate:now];
+        self.record.startTime = [formatter stringFromDate:now];
         [self timeStart];
         //NSLog(@"%d", sender.tag);
         [sender setTitle:@"停止" forState:UIControlStateNormal];
@@ -91,7 +88,8 @@
         NSDate *now = [NSDate date];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
-        self.overTime = [formatter stringFromDate:now];
+        self.record.overTime = [formatter stringFromDate:now];
+        self.record.locationsArray = [NSMutableArray arrayWithArray:self.locationsArray];
         self.speedLabel.text = @"0.00";
         [sender setTitle:@"开始" forState:UIControlStateNormal];
         [sender setBackgroundColor:[UIColor colorWithRed:0 green:0.5 blue:1 alpha:1]];
@@ -110,7 +108,7 @@
     if (_timer) {
         [_timer invalidate];
         _timer = nil;
-        _time = -1;
+        self.record.time = -1;
     }
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
@@ -119,10 +117,10 @@
 }
 
 - (void)updateTime {
-    self.time++;
-    int seconds = self.time % 60;
-    int minutes = self.time / 60;
-    int hours = self.time / 3600;
+    self.record.time++;
+    int seconds = self.record.time % 60;
+    int minutes = self.record.time / 60;
+    int hours = self.record.time / 3600;
     if (hours < 10 || minutes < 10 || seconds < 10) {
         if (hours < 10 && minutes < 10 && seconds < 10) {
             self.timeLabel.text = [NSString stringWithFormat:@"0%d:0%d:0%d", hours, minutes, seconds];
@@ -177,7 +175,7 @@
     //NSLog(@"%f", self.time);
 }
 
-#pragma mark 提示Label动画实现
+#pragma mark 提示Label的动画
 
 - (void)tipLabelAnimationStart {
     if (_tipLabelAnimationTimer) {
@@ -239,20 +237,20 @@
         double distance = [currentLocation distanceFromLocation:self.oldLocation];
         
         if (distance > 0) {
-            self.distance += distance;
+            self.record.distance += distance;
         }
         
-        if (self.time > 5 && self.distance > 20) {
-            self.averageSpeed = (self.distance / self.time);
+        if (self.record.time > 5 && self.record.distance > 20) {
+            self.record.averageSpeed = (self.record.distance / self.record.time);
         }
         
         if (speed >= 0) {
             self.speedLabel.text = [NSString stringWithFormat:@"%.2f", speed * 3.6];
-            if (self.distance >= 0) {
-                self.rangeLabel.text = [NSString stringWithFormat:@"%.2f", (self.distance / 1000)];
+            if (self.record.distance >= 0) {
+                self.rangeLabel.text = [NSString stringWithFormat:@"%.2f", (self.record.distance / 1000)];
             }
-            if (self.averageSpeed >= 0) {
-                self.averageSpeedLabel.text = [NSString stringWithFormat:@"%.2f", self.averageSpeed * 3.6];
+            if (self.record.averageSpeed >= 0) {
+                self.averageSpeedLabel.text = [NSString stringWithFormat:@"%.2f", self.record.averageSpeed * 3.6];
             }
         }
         

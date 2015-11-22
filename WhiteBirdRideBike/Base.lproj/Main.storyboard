@@ -25,37 +25,25 @@
             </objects>
             <point key="canvasLocation" x="-160" y="528"/>
         </scene>
-        <!--Root View Controller-->
+        <!--我的信息-->
         <scene sceneID="qrq-s2-XIi">
             <objects>
-                <tableViewController id="vMI-22-cTv" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="m1G-oG-uT1">
+                <tableViewController title="我的信息" id="vMI-22-cTv" customClass="ProfileTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="m1G-oG-uT1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AFb-12-qzQ">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AFb-12-qzQ" id="C0S-by-B3Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="vMI-22-cTv" id="3bT-bJ-tU4"/>
                             <outlet property="delegate" destination="vMI-22-cTv" id="DIG-oh-uQZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="GKW-eA-d8d"/>
+                    <navigationItem key="navigationItem" title="我的信息" id="GKW-eA-d8d"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMk-Fs-tRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="528"/>
+            <point key="canvasLocation" x="1266" y="528"/>
         </scene>
         <!--我的-->
         <scene sceneID="uhh-vP-SI9">
@@ -66,6 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="vMI-22-cTv" kind="relationship" relationship="rootViewController" id="Dz5-Aa-NaQ"/>

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class RideRecord;
+
 @interface RideViewController : UIViewController
 
 @property (nonatomic, strong) NSMutableArray *locationsArray;
+@property (nonatomic, strong) RideRecord *record;
 
 @property (weak, nonatomic) IBOutlet UILabel *speedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;

@@ -17,6 +17,8 @@
 		8A579CF81BFF53320012C3E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A579CF71BFF53320012C3E3 /* CoreGraphics.framework */; };
 		8A579CFD1C003D050012C3E3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A579CFC1C003D050012C3E3 /* MapViewController.m */; };
 		8A579D001C0040690012C3E3 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A579CFF1C0040690012C3E3 /* HistoryViewController.m */; };
+		8A823B271C01C27A00EF2474 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A823B261C01C27A00EF2474 /* ProfileTableViewController.m */; };
+		8A823B2A1C01C44200EF2474 /* RideRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A823B291C01C44200EF2474 /* RideRecord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		8A579CFC1C003D050012C3E3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		8A579CFE1C0040690012C3E3 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		8A579CFF1C0040690012C3E3 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		8A823B251C01C27A00EF2474 /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
+		8A823B261C01C27A00EF2474 /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
+		8A823B281C01C44200EF2474 /* RideRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RideRecord.h; sourceTree = "<group>"; };
+		8A823B291C01C44200EF2474 /* RideRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RideRecord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +110,16 @@
 			children = (
 				8A579CD71BFF47750012C3E3 /* AppDelegate.h */,
 				8A579CD81BFF47750012C3E3 /* AppDelegate.m */,
+				8A823B281C01C44200EF2474 /* RideRecord.h */,
+				8A823B291C01C44200EF2474 /* RideRecord.m */,
 				8A579CEE1BFF49B70012C3E3 /* RideViewController.h */,
 				8A579CEF1BFF49B70012C3E3 /* RideViewController.m */,
 				8A579CFB1C003D050012C3E3 /* MapViewController.h */,
 				8A579CFC1C003D050012C3E3 /* MapViewController.m */,
 				8A579CFE1C0040690012C3E3 /* HistoryViewController.h */,
 				8A579CFF1C0040690012C3E3 /* HistoryViewController.m */,
+				8A823B251C01C27A00EF2474 /* ProfileTableViewController.h */,
+				8A823B261C01C27A00EF2474 /* ProfileTableViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -187,6 +197,8 @@
 				8A579CD91BFF47750012C3E3 /* AppDelegate.m in Sources */,
 				8A579CF01BFF49B70012C3E3 /* RideViewController.m in Sources */,
 				8A579CD61BFF47750012C3E3 /* main.m in Sources */,
+				8A823B2A1C01C44200EF2474 /* RideRecord.m in Sources */,
+				8A823B271C01C27A00EF2474 /* ProfileTableViewController.m in Sources */,
 				8A579D001C0040690012C3E3 /* HistoryViewController.m in Sources */,
 				8A579CFD1C003D050012C3E3 /* MapViewController.m in Sources */,
 			);
