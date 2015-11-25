@@ -112,16 +112,32 @@
 				8A579CD81BFF47750012C3E3 /* AppDelegate.m */,
 				8A823B281C01C44200EF2474 /* RideRecord.h */,
 				8A823B291C01C44200EF2474 /* RideRecord.m */,
+				8A823B2B1C01D21000EF2474 /* RideBike */,
+				8A823B2C1C01D21600EF2474 /* Profile */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8A823B2B1C01D21000EF2474 /* RideBike */ = {
+			isa = PBXGroup;
+			children = (
 				8A579CEE1BFF49B70012C3E3 /* RideViewController.h */,
 				8A579CEF1BFF49B70012C3E3 /* RideViewController.m */,
 				8A579CFB1C003D050012C3E3 /* MapViewController.h */,
 				8A579CFC1C003D050012C3E3 /* MapViewController.m */,
-				8A579CFE1C0040690012C3E3 /* HistoryViewController.h */,
-				8A579CFF1C0040690012C3E3 /* HistoryViewController.m */,
+			);
+			name = RideBike;
+			sourceTree = "<group>";
+		};
+		8A823B2C1C01D21600EF2474 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
 				8A823B251C01C27A00EF2474 /* ProfileTableViewController.h */,
 				8A823B261C01C27A00EF2474 /* ProfileTableViewController.m */,
+				8A579CFE1C0040690012C3E3 /* HistoryViewController.h */,
+				8A579CFF1C0040690012C3E3 /* HistoryViewController.m */,
 			);
-			name = Classes;
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

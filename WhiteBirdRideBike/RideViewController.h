@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) NSMutableArray *locationsArray;
 @property (nonatomic, strong) RideRecord *record;
+@property (nonatomic, strong) NSMutableArray *chinaLocationsArray;
 
 @property (weak, nonatomic) IBOutlet UILabel *speedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;

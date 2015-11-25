@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSMutableArray *locationsArray;
 @property (nonatomic, assign) int flag;
+@property (nonatomic, strong) NSMutableArray *chinaLocationsArray;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 

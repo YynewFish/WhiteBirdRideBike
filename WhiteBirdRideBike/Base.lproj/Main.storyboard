@@ -196,7 +196,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上划查看骑行路线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAD-GW-vd0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上划查看骑行轨迹" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAD-GW-vd0">
                                 <rect key="frame" x="8" y="290" width="584" height="19.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -282,10 +282,10 @@
             </objects>
             <point key="canvasLocation" x="1266" y="-260"/>
         </scene>
-        <!--地图-->
+        <!--骑行轨迹-->
         <scene sceneID="OVC-Gu-QU6">
             <objects>
-                <viewController title="地图" id="sd8-sg-m0s" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController title="骑行轨迹" id="sd8-sg-m0s" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3DC-w6-lyP"/>
                         <viewControllerLayoutGuide type="bottom" id="9XQ-Eh-fXN"/>
@@ -306,7 +306,7 @@
                                 <animations/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <navigationItem title="地图" id="IeP-e0-0io">
+                                    <navigationItem title="骑行轨迹" id="IeP-e0-0io">
                                         <barButtonItem key="leftBarButtonItem" title="关闭" id="QLy-g5-v3F">
                                             <connections>
                                                 <action selector="quit:" destination="sd8-sg-m0s" id="SCp-m4-NSp"/>

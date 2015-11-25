@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileTableViewController : UITableViewController
+@interface ProfileTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

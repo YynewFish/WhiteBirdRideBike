@@ -16,7 +16,6 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) MKPolyline *routeLine;
 @property (nonatomic, strong) MKPolylineView *routeLineView;
-@property (nonatomic, assign) MKMapRect routeRect;
 
 @end
 
@@ -41,10 +40,12 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [self.locationManager startUpdatingLocation];
+    self.mapView.showsUserLocation = YES;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [self.locationManager stopUpdatingLocation];
+    self.mapView.showsUserLocation = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +70,7 @@
     UINavigationController *navgationController = tabBarController.viewControllers[0];
     RideViewController *presentingVC = (RideViewController *)navgationController.viewControllers[0];
     presentingVC.locationsArray = self.locationsArray;
+    presentingVC.chinaLocationsArray = self.chinaLocationsArray;
     //NSLog(@"%@", [presentingVC class]);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -78,17 +80,17 @@
 -(void) loadRoute
 {
     //NSLog(@"loadRoute");
-    MKMapPoint *pointArr = malloc(sizeof(CLLocationCoordinate2D) * self.locationsArray.count);
+    MKMapPoint *pointArr = malloc(sizeof(CLLocationCoordinate2D) * self.chinaLocationsArray.count);
     
-    for(int i = 0; i < self.locationsArray.count; i++)
+    for(int i = 0; i < self.chinaLocationsArray.count; i++)
     {
-        CLLocation *location = [self.locationsArray objectAtIndex:i];
+        CLLocation *location = [self.chinaLocationsArray objectAtIndex:i];
         CLLocationCoordinate2D coordinate = location.coordinate;
         MKMapPoint point = MKMapPointForCoordinate(coordinate);
         pointArr[i] = point;
     }
     
-    self.routeLine = [MKPolyline polylineWithPoints:pointArr count:self.locationsArray.count];
+    self.routeLine = [MKPolyline polylineWithPoints:pointArr count:self.chinaLocationsArray.count];
     
     free(pointArr); 
 }
@@ -101,22 +103,7 @@
         CLLocation *currentLocation = [locations lastObject];
         [self.locationsArray addObject:currentLocation];
     }
-    if (self.flag != 1) {
-        if (self.routeLine != nil) {
-            self.routeLine = nil;
-            self.routeLineView = nil;
-            [self.mapView removeOverlay:self.routeLine];
-            //NSLog(@"removeOverlay");
-        }
-        
-        // create the overlay
-        [self loadRoute];
-        
-        if (self.routeLine != nil) {
-            [self.mapView addOverlay:self.routeLine];
-            //NSLog(@"addOverlay");
-        }
-    }
+    
 }
 
 #pragma mark - MKMapViewDelegate
@@ -137,6 +124,30 @@
     }
     
     return overlayView;
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    if (self.flag == 2) {
+        CLLocation *currentLocation = userLocation.location;
+        [self.chinaLocationsArray addObject:currentLocation];
+        //NSLog(@"%f,%f", currentLocation.coordinate.latitude, currentLocation.coordinate.longitude);
+    }
+    if (self.flag != 1) {
+        if (self.routeLine != nil) {
+            self.routeLine = nil;
+            self.routeLineView = nil;
+            [self.mapView removeOverlay:self.routeLine];
+            //NSLog(@"removeOverlay");
+        }
+        
+        // create the overlay
+        [self loadRoute];
+        
+        if (self.routeLine != nil) {
+            [self.mapView addOverlay:self.routeLine];
+            //NSLog(@"addOverlay");
+        }
+    }
 }
 
 @end
